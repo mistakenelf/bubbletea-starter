@@ -1,6 +1,6 @@
 package constants
 
 const (
-	// APP_VERSION is the current version of the app.
-	APP_VERSION = "0.0.1"
+	// AppVersion is the current version of the app.
+	AppVersion = "0.0.1"
 )

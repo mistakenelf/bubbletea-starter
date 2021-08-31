@@ -5,6 +5,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
+// Init initializes the UI.
 func (m Model) Init() tea.Cmd {
 	var cmds []tea.Cmd
 

@@ -4,6 +4,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
+// Update handles updating the UI.
 func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 	var cmds []tea.Cmd

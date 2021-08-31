@@ -5,12 +5,14 @@ import (
 	"github.com/charmbracelet/bubbles/viewport"
 )
 
+// Model represents the state of the UI.
 type Model struct {
 	loader   spinner.Model
 	viewport viewport.Model
 	ready    bool
 }
 
+// NewModel creates an instance of the UI.
 func NewModel() Model {
 	l := spinner.NewModel()
 	l.Spinner = spinner.Dot
