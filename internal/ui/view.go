@@ -12,9 +12,16 @@ func (m Model) View() string {
 		return fmt.Sprintf("%s%s", m.loader.View(), "loading...")
 	}
 
+	currentView := ""
+	if m.help.ShowAll {
+		currentView = m.help.View(m.keys)
+	} else {
+		currentView = m.viewport.View()
+	}
+
 	return lipgloss.NewStyle().
 		Foreground(lipgloss.Color("#FFFFFF")).
 		Bold(true).
 		Italic(true).
-		Render(m.viewport.View())
+		Render(currentView)
 }

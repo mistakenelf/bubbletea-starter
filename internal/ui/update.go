@@ -1,6 +1,7 @@
 package ui
 
 import (
+	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 )
 
@@ -13,17 +14,20 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		m.viewport.Height = msg.Height
 		m.viewport.Width = msg.Width
-		m.viewport.SetContent("Welcome to the bubbletea-starter app")
+		m.help.Width = msg.Width
 
 		if !m.ready {
 			m.ready = true
 		}
 
 	case tea.KeyMsg:
-		switch msg.String() {
-		// Exit bubbletea-starter.
-		case "ctrl+c":
+		switch {
+		case key.Matches(msg, m.keys.Quit):
 			return m, tea.Quit
+		case key.Matches(msg, m.keys.Help):
+			m.help.ShowAll = !m.help.ShowAll
+
+			return m, nil
 		}
 	}
 
