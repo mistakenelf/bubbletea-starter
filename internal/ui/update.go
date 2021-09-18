@@ -15,6 +15,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.viewport.Height = msg.Height
 		m.viewport.Width = msg.Width
 		m.help.Width = msg.Width
+		m.viewport.SetContent("Welcome to the bubbletea-starter app")
 
 		if !m.ready {
 			m.ready = true
