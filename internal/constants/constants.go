@@ -1,6 +1,11 @@
 package constants
 
-const (
-	// AppVersion is the current version of the app.
-	AppVersion = "0.0.1"
-)
+// VersionTypes contains the different types of versions.
+type VersionTypes struct {
+	AppVersion string
+}
+
+// Versions contains the different kinds of versions and their values.
+var Versions = VersionTypes{
+	AppVersion: "0.0.1",
+}

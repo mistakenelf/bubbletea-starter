@@ -15,7 +15,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:     "bubbletea-starter",
 	Short:   "bubbletea-starter is a starting point for bubbletea apps",
-	Version: constants.AppVersion,
+	Version: constants.Versions.AppVersion,
 	Args:    cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		m := ui.NewModel()
