@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/charmbracelet/bubbles v0.9.0
-	github.com/charmbracelet/bubbletea v0.15.0
+	github.com/charmbracelet/bubbletea v0.16.0
 	github.com/charmbracelet/lipgloss v0.4.0
 	github.com/spf13/cobra v1.2.1
 )
@@ -19,6 +19,6 @@ require (
 	github.com/muesli/termenv v0.9.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	golang.org/x/sys v0.0.0-20210917161153-d61c044b1678 // indirect
-	golang.org/x/term v0.0.0-20210916214954-140adaaadfaf // indirect
+	golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6 // indirect
+	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 )
