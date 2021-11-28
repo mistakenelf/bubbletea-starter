@@ -25,6 +25,10 @@ func LoadConfig() {
 	viper.SetConfigName(".bubbletea-starter")
 	viper.SetConfigType("yml")
 
+	// Set default config values.
+	viper.SetDefault("settings.enable_logging", false)
+	viper.SetDefault("settings.enable_mousewheel", true)
+
 	if err := viper.SafeWriteConfig(); err != nil {
 		if os.IsNotExist(err) {
 			err = viper.WriteConfig()
@@ -48,11 +52,4 @@ func GetConfig() (config Config) {
 	}
 
 	return
-}
-
-// SetDefaults sets default values for the config.
-func SetDefaults() {
-	// App Settings.
-	viper.SetDefault("settings.enable_logging", false)
-	viper.SetDefault("settings.enable_mousewheel", true)
 }
