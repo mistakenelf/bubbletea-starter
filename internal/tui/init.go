@@ -1,4 +1,4 @@
-package ui
+package tui
 
 import (
 	"github.com/charmbracelet/bubbles/spinner"
@@ -6,7 +6,7 @@ import (
 )
 
 // Init initializes the UI.
-func (m Model) Init() tea.Cmd {
+func (b Bubble) Init() tea.Cmd {
 	var cmds []tea.Cmd
 
 	cmds = append(cmds, spinner.Tick)

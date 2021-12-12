@@ -1,4 +1,4 @@
-package ui
+package tui
 
 import (
 	"fmt"
@@ -7,16 +7,17 @@ import (
 )
 
 // View returns a string representation of the entire application UI.
-func (m Model) View() string {
-	if !m.ready {
-		return fmt.Sprintf("%s%s", m.loader.View(), "loading...")
+func (b Bubble) View() string {
+	var currentView string
+
+	if !b.ready {
+		return fmt.Sprintf("%s%s", b.loader.View(), "loading...")
 	}
 
-	currentView := ""
-	if m.help.ShowAll {
-		currentView = m.help.View(m.keys)
+	if b.help.ShowAll {
+		currentView = b.help.View(b.keys)
 	} else {
-		currentView = m.viewport.View()
+		currentView = b.viewport.View()
 	}
 
 	return lipgloss.NewStyle().

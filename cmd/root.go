@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/knipferrc/bubbletea-starter/internal/config"
-	"github.com/knipferrc/bubbletea-starter/internal/ui"
+	"github.com/knipferrc/bubbletea-starter/internal/tui"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
@@ -38,7 +38,7 @@ var rootCmd = &cobra.Command{
 			}()
 		}
 
-		m := ui.NewModel()
+		b := tui.NewBubble()
 		var opts []tea.ProgramOption
 
 		// Always append alt screen program option.
@@ -50,7 +50,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		// Initialize new app.
-		p := tea.NewProgram(m, opts...)
+		p := tea.NewProgram(b, opts...)
 		if err := p.Start(); err != nil {
 			log.Fatal("Failed to start bubbletea-starter", err)
 			os.Exit(1)
