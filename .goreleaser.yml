@@ -10,8 +10,23 @@ before:
 
 builds:
   - main: ./main.go
-    binary: bubbletea-starter
-    goos: ["linux", "darwin", "windows"]
-    goarch: ["386", "amd64"]
+    binary: bubletea-starter
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
     env:
       - CGO_ENABLED=0
+
+nfpms:
+  - maintainer: Tyler Knipfer <knipferrc@gmail.com>
+    description: bubbletea-starter is a starting point for bubbletea apps
+    homepage: https://github.com/knipferrc/bubbletea-starter
+    license: MIT
+    formats:
+      - deb
+      - rpm
+      - apk
