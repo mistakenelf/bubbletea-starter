@@ -5,7 +5,7 @@ test:
 	go test ./... -short
 
 build:
-	go build -o fm main.go
+	go build -o bubbletea-starter main.go
 
 install:
 	go install
