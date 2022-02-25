@@ -19,7 +19,7 @@ type Config struct {
 }
 
 // LoadConfig loads a users config and creates the config if it does not exist
-// located at ~/.fm.yml.
+// located at ~/.bubbletea-starter.yml.
 func LoadConfig() {
 	viper.AddConfigPath("$HOME")
 	viper.SetConfigName(".bubbletea-starter")
