@@ -24,10 +24,10 @@ func NewBubble() Bubble {
 	cfg := config.GetConfig()
 	keys := getDefaultKeyMap()
 
-	l := spinner.NewModel()
+	l := spinner.New()
 	l.Spinner = spinner.Dot
 
-	h := help.NewModel()
+	h := help.New()
 	h.Styles.FullKey.Foreground(lipgloss.Color("#ffffff"))
 	h.Styles.FullDesc.Foreground(lipgloss.Color("#ffffff"))
 
