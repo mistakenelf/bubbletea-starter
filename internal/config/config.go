@@ -57,11 +57,11 @@ func (parser ConfigParser) getDefaultConfigYamlContents() string {
 // Error returns the error message for when a config file is not found.
 func (e configError) Error() string {
 	return fmt.Sprintf(
-		`Couldn't find a branch-cleaner.yml configuration file.
+		`Couldn't find a bubbletea-starter.yml configuration file.
 Create one under: %s
 Example of a config.yml file:
 %s
-For more info, go to https://github.com/knipferrc/branch-cleaner
+For more info, go to https://github.com/knipferrc/bubbletea-starter
 press q to exit.
 Original error: %v`,
 		path.Join(e.configDir, AppDir, ConfigFileName),
