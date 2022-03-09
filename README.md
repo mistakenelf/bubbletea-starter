@@ -40,7 +40,7 @@ go install github.com/knipferrc/bubbletea-starter@latest
 
 ## Configuration
 
-- A config file will be generated at `~/.bubbletea-starter.yml` when you first run `bubbletea-starter`
+A config file will be generated (`bubbletea-starter.yml`) in the config directory of the OS in which the app is ran from. If `XDG_CONFIG_HOME` is set, that will be used instead.
 
 ```yml
 settings:
