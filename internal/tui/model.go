@@ -20,8 +20,7 @@ type Bubble struct {
 }
 
 // NewBubble creates an instance of the UI.
-func NewBubble() Bubble {
-	cfg := config.GetConfig()
+func NewBubble(cfg config.Config) Bubble {
 	keys := getDefaultKeyMap()
 
 	l := spinner.New()
