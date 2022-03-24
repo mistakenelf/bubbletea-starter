@@ -21,6 +21,6 @@ require (
 	github.com/muesli/termenv v0.11.1-0.20220212125758-44cd13922739 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	golang.org/x/sys v0.0.0-20220315194320-039c03cc5b86 // indirect
+	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 )
