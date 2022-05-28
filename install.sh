@@ -54,6 +54,7 @@ get_binaries() {
   case "$PLATFORM" in
     darwin/386) BINARIES="bubbletea-starter" ;;
     darwin/amd64) BINARIES="bubbletea-starter" ;;
+    darwin/arm64) BINARIES="bubbletea-starter" ;;
     linux/386) BINARIES="bubbletea-starter" ;;
     linux/amd64) BINARIES="bubbletea-starter" ;;
     windows/386) BINARIES="bubbletea-starter" ;;
